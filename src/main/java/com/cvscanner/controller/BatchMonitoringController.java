@@ -18,7 +18,7 @@ public class BatchMonitoringController {
         return jobExplorer.getJobInstances(jobName, 0, 10)
                 .stream()
                 .flatMap(instance -> jobExplorer.getJobExecutions(instance).stream())
-                .map(exec -> jobName + " => " + exec.getStatus().toString())
+                .map(exec -> jobName +  " " + exec.getStatus().toString())
                 .toList();
     }
     @GetMapping("/steps/{jobName}")
