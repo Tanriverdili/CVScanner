@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cvscanner
+    username: postgres
+    password: 2025
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  batch:
+    jdbc:
+      initialize-schema: never
+
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: docflow.api.system2026@gmail.com
+    password: "qrvt fpsp azlt uyfz"
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            trust: smtp.gmail.com
+
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+server:
+  port: 8080
